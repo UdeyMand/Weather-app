@@ -33,10 +33,9 @@ async function weatherdetails(city) {
   
 
   let weather = await fetch(
-    `http://api.weatherapi.com/v1/forecast.json?key=002fc6a09c5c45d484454554251706&q=${city}&days=7&aqi=yes&alerts=yes`
+    `/api/weather?city=${city}`
   );
   let data = await weather.json();
-  console.log(data);
   locationelement.innerHTML = data.location
     ? data.location.name +
       "," +
