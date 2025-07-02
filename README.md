@@ -1,2 +1,2 @@
-# Weather-app
-A modern, responsive weather dashboard that provides real-time weather update.
+**Weather App**  
+A modern, responsive weather dashboard that provides real-time weather updates, 7-day forecasts, and air quality information for any city. Built with HTML, CSS, and JavaScript, the app displays current temperature, weather conditions, sunrise/sunset times, wind, humidity, UV index, visibility, and AQI with health advice. The interface is clean and adapts to desktop and mobile screens, featuring a sidebar for navigation and a search bar for quick city lookup. Data is fetched from WeatherAPI, ensuring accurate and up-to-date information. Perfect for users who want a quick, clear overview of weather and air quality at a glance.
