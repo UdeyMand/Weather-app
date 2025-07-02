@@ -196,18 +196,21 @@ async function weatherdetails(city) {
       // weather image in content 4 --> 
 
      weatherimg.forEach((element , i) => {
-      element.src = data.forecast.forecastday[i].day.condition.icon
-      element.addEventListener("mouseover", () => {
-        const div = document.createElement("div");
-        div.textContent = "hello";
-        element.appendChild(div);
-      })
+      if (data.forecast.forecastday[i]) {
+        element.src = data.forecast.forecastday[i].day.condition.icon;
+      } else {
+        element.src = ""; // or a placeholder image
+      }
      });
 
     //  temprature in content 4
 
     forecasttemp.forEach((element , i) => {
-      element.textContent = data.forecast.forecastday[i].day.maxtemp_c + "/" + data.forecast.forecastday[i].day.mintemp_c
+      if (data.forecast.forecastday[i]) {
+        element.textContent = data.forecast.forecastday[i].day.maxtemp_c + "/" + data.forecast.forecastday[i].day.mintemp_c;
+      } else {
+        element.textContent = "";
+      }
     });
 }
 
