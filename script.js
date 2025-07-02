@@ -25,26 +25,28 @@ const forecastday = document.querySelectorAll('.day')
 const weatherimg =  document.querySelectorAll('.weather-img')
 const forecasttemp =  document.querySelectorAll('.day-temprature')
 const rainchances = document.querySelector(".rain-chances")
+const searchbtn = document.querySelector(".searchbtn")
 // fetch api -->
  search.value = "India"
 
 async function weatherdetails(city) {
   
-let apikey = ""
-   let weather = await fetch(
-      `http://api.weatherapi.com/v1/forecast.json?key=${apikey}&q=${city}&days=7&aqi=yes&alerts=yes`
-    );
-    let data = await weather.json();
-    console.log(data);
-    locationelement.innerHTML = data.location
-      ? data.location.name +
-        "," +
-        data.location.region +
-        "," +
-        data.location.country
-      : "Location not found";
+let apikey = "002fc6a09c5c45d484454554251706";
 
-    // weather icon in content1 -->
+  let weather = await fetch(
+    `http://api.weatherapi.com/v1/forecast.json?key=${apikey}&q=${city}&days=7&aqi=yes&alerts=yes`
+  );
+  let data = await weather.json();
+  console.log(data);
+  locationelement.innerHTML = data.location
+    ? data.location.name +
+      "," +
+      data.location.region +
+      "," +
+      data.location.country
+    : "Location not found";
+
+  // weather icon in content1 -->
 
     weathericon.src = data.current.condition.icon;
 
@@ -274,6 +276,10 @@ document.addEventListener("keydown", async (event) => {
   }
 });
 
+searchbtn.addEventListener("click" , ()=>{
+  weatherdetails(search.value)
+});
+
 weatherdetails("India")
 
 
@@ -281,7 +287,7 @@ const menubtn = document.querySelector(".menu-btn");
 const aside = document.getElementsByTagName("aside");
 if (menubtn && aside.length > 0) {
   menubtn.addEventListener("click", () => {
-    // Toggle the display between "block" and "none"
     aside[0].style.display = aside[0].style.display === "block" ? "none" : "block";
   });
+
 }
