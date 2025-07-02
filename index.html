@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+  </head>
+  <body>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+    </style>
+    <nav>
+      <div class="nav-left">
+        <div>Hi , User</div>
+        <div style="font-size: 20px; font-weight: bold">Good Morning</div>
+      </div>
+      <div class="nav-right">
+        <input type="text" id="search" placeholder="Enter the Location" />
+        <span class="profile"></span>
+      </div>
+    </nav>
+    <div class="menu-btn">
+      <img class="menu-btn-svg" src="assets/Vector (1).svg" alt="">
+    </div>
+    <div class="asidemainflex">
+      <aside>
+        <div class="aside">
+          <div class="navlogotop">
+            <img src="assets/Vector (1).svg" alt="" />
+          </div>
+          <div class="navlogo logo1">
+            <img src="assets/Vector (2).svg" alt="" />
+          </div>
+          <div class="navlogo logo2">
+            <img src="assets/Vector (3).svg" alt="" />
+          </div>
+          <div class="navlogo logo3">
+            <img src="assets/Vector (4).svg" alt="" />
+          </div>
+          <div class="navlogo logo4">
+            <img src="assets/Vector (5).svg" alt="" />
+          </div>
+          <div class="navlogo logo4">
+            <img src="assets/Vector (6).svg" alt="" />
+          </div>
+          <div class="navlogobottom">
+            <img src="assets/Vector (7).svg" alt="" />
+          </div>
+        </div>
+      </aside>
+      <main>
+        <div class="grid">
+          <div class="weathercontent content1">
+            <div class="location">
+              <img
+                class="locationicon"
+                style="margin-left: 10px"
+                src="assets/Vector (8).svg"
+                alt=""
+              />
+             <div class="locationname"></div>
+            </div>
+            <div class="Day" style="font-size: 41px; font-weight: bold">
+              Sunday
+            </div>
+            <div class="Date">02 Aug 2025</div>
+            <div class="temprature">25°</div>
+            <br />
+            <div class="min-temprature">/22°</div>
+            <div class="weathercondition">Heavy Rain</div>
+            <div class="feelslike">Feels like 31°</div>
+            <div class="weathericon-container">
+              <img class="weathericon" src="" alt="" width="164" height="158" />
+            </div>
+            <div class="raincont">
+            <div class="rain-info">Chances of Rain</div>
+            <div class="rain-chances">80%</div>
+          </div>
+          </div>
+          <div class="weathercontent content2">
+            <div class="highlight-heading">Today's Highlights</div>
+            <div class="weather-highlights-container">
+              <div class="highlight highlight1">
+                <div class="highlight-head">
+                  <img
+                    class="highlightsvg"
+                    src="assets/solar_wind-linear.svg"
+                    alt=""
+                  />
+                  Wind Speed
+                </div>
+                <div class="windspeed highlight-info-text-top">7.20km/hr</div>
+                <div class="time highlight-info-text-bottom">9:00 am</div>
+              </div>
+              <div class="highlight highlight2">
+                <div class="highlight-head">
+                  <img
+                    src="assets/Vector (10).svg"
+                    alt=""
+                    class="highlightsvg"
+                  />
+                  Humidity
+                </div>
+                <div class="humidity highlight-info-text-top">85%</div>
+                <div class="humiditystatus highlight-info-text-bottom">
+                  Too Humid
+                </div>
+              </div>
+              <div class="highlight highlight3">
+                <div class="sunrise-container">
+                  <img
+                    src="assets/image 9.svg"
+                    alt="Sunrise"
+                    class="sunrisesvg"
+                  />
+                  <div class="sunrise-info">
+                    <div class="sunrise">Sunrise</div>
+                    <div class="sunrise-time">4:50 AM</div>
+                  </div>
+                </div>
+              </div>
+              <div class="highlight highlight4">
+                <div class="highlight-head">
+                  <img
+                    class="highlightsvg"
+                    src="assets/Vector (9).svg"
+                    alt=""
+                  />
+                  UV Index
+                </div>
+                <div class="uvindex highlight-info-text-top">4 UV</div>
+                <div class="uvstatus highlight-info-text-bottom">
+                  Moderate UV
+                </div>
+              </div>
+              <div class="highlight highlight5">
+                <div class="highlight-head">
+                  <img
+                    class="highlightsvg"
+                    src="assets/Vector (11).svg"
+                    alt=""
+                  />
+                  Visibility
+                </div>
+                <div class="visible-distance highlight-info-text-top">10km</div>
+                <div class="visibilitystatus highlight-info-text-bottom">
+                  Visibility is good
+                </div>
+              </div>
+              <div class="highlight highlight6">
+                <div class="sunset-container">
+                  <img
+                    src="assets/image 10.svg"
+                    alt="Sunset"
+                    class="sunsetsvg"
+                  />
+                  <div class="sunset-info">
+                    <div class="sunset">Sunset</div>
+                    <div class="sunset-time">6:45 PM</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="weathercontent content3">
+            <div class="aqi">Air Quality Index (AQI)</div>
+            <div class="aqi-info-holder">
+              <div class="aqibox">
+                <div class="aqiheading"><strong>Based on US EPA AQI Standards</strong></div>
+                <div class="aqilevel">87</div>
+                <div class="aqivalue">Moderate</div>
+              </div>
+              <div class="aqidetails">
+                <div class="pollutant">
+                  <strong>Main Pollutant:</strong> PM2.5,PM10,O₃
+                </div>
+                <div class="advice">
+                  <strong>Advice:</strong> <span class="advicecontent">Acceptable air sensitive individuals
+                  should limit prolonged exposure.</span> 
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="weathercontent content4">
+            <div class="forecast-heading"><strong>7 Day Forecast</strong></div>
+            <div class="forecast-container">
+              <div class="forecast forecast-today">
+                <div class="day day1">Today</div>
+                <div class="weatherimage">
+                  <img class="weather-img weather-img1" src="" alt="" width="78" height="76">
+                </div>
+                <div class="day-temprature">
+                  28°C
+                </div>
+              </div>
+              <div class="forecast forecast-today">
+                <div class="day day2">Mon</div>
+                <div class="weatherimage">
+                  <img class="weather-img weather-img2" src="" alt="" width="78" height="76">
+                </div>
+                <div class="day-temprature">
+                  28°C
+                </div>
+              </div>
+              <div class="forecast forecast-today">
+                <div class="day day3">Tue</div>
+                <div class="weatherimage">
+                  <img class="weather-img weather-img3" src="" alt="" width="78" height="76">
+                </div>
+                <div class="day-temprature">
+                  28°C
+                </div>
+              </div>
+              <div class="forecast forecast-today">
+                <div class="day day4">Wed</div>
+                <div class="weatherimage">
+                  <img class="weather-img weather-img4" src="" alt="" width="78" height="76">
+                </div>
+                <div class="day-temprature">
+                  28°C
+                </div>
+              </div>
+              <div class="forecast forecast-today">
+                <div class="day day5">Thu</div>
+                <div class="weatherimage">
+                  <img class="weather-img weather-img5" src="" alt="" width="78" height="76">
+                </div>
+                <div class="day-temprature">
+                  28°C
+                </div>
+              </div>
+              <div class="forecast forecast-today">
+                <div class="day day6">Fri</div>
+                <div class="weatherimage">
+                  <img class="weather-img weather-img6" src="" alt="" width="78" height="76">
+                </div>
+                <div class="day-temprature">
+                  28°C
+                </div>
+              </div>
+              <div class="forecast forecast-today">
+                <div class="day day7">Sat</div>
+                <div class="weatherimage">
+                  <img class="weather-img weather-img7" src="" alt="" width="78" height="76">
+                </div>
+                <div class="day-temprature">
+                  28°C
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
