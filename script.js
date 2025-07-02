@@ -31,10 +31,9 @@ const searchbtn = document.querySelector(".searchbtn")
 
 async function weatherdetails(city) {
   
-let apikey = "002fc6a09c5c45d484454554251706";
 
   let weather = await fetch(
-    `http://api.weatherapi.com/v1/forecast.json?key=${apikey}&q=${city}&days=7&aqi=yes&alerts=yes`
+    `http://api.weatherapi.com/v1/forecast.json?key=002fc6a09c5c45d484454554251706&q=${city}&days=7&aqi=yes&alerts=yes`
   );
   let data = await weather.json();
   console.log(data);
